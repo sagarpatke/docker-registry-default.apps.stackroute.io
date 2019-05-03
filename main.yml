@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+    - name: Create directory for openshift docker-registry public key
+      file:
+        path: /etc/docker/certs.d/docker-registry-default.apps.stackroute.io/
+        state: directory
+        recurse: yes
+    - name: Download docker-registry crt
+      get_url:
+        url: https://s3.ap-south-1.amazonaws.com/openshift-public/ca.crt
+        dest: /etc/docker/certs.d/docker-registry-default.apps.stackroute.io/ca.crt
+        checksum: sha256:2d35f037792d40d707953b033d943fcb5bb0334440ce98bec957bc9f82d87e9d
