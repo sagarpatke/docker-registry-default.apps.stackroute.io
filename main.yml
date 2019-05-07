@@ -11,4 +11,4 @@
       get_url:
         url: https://s3.ap-south-1.amazonaws.com/openshift-public/ca.crt
         dest: /etc/docker/certs.d/docker-registry-default.apps.stackroute.io/ca.crt
-        checksum: sha256:2d35f037792d40d707953b033d943fcb5bb0334440ce98bec957bc9f82d87e9d
+        checksum: sha256:a56366f1cf458821d7ecd1bb8e1ba93ccbaaa223c0f893aa61bdba51d3eb3e49
